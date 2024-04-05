@@ -22,4 +22,10 @@ def compare_files(file_path1, file_path2):
         diff_file.writelines(diff_lines)
 
 if __name__ == "__main__":
-    compare_files()
+    file1_path = "file1.txt"
+    file2_path = "file2.txt"
+    with open(file1_path, "w") as file1:
+        file1.write("line1\nline2\n")
+    with open(file2_path, "w") as file2:
+        file2.write("line2\nline3\n")
+    compare_files("file1.txt", "file2.txt")
