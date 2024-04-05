@@ -19,7 +19,7 @@ def test_compare_files(create_input_files):
     assert os.path.exists(same_path)  # Check if same.txt was generated
     assert os.path.exists(diff_path)  # Check if diff.txt was generated
 
-    # Read the content of the generated files and assert their content
+
     with open(same_path, "r") as same_file:
         assert same_file.read() == "line2\n"
     with open(diff_path, "r") as diff_file:
